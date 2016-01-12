@@ -5,19 +5,19 @@
 #include "constants.h"
 #include <time.h>       /* time */
 
-//
-extern double **Sbound;
 // forward definition of functions
-void declaration_of_variables(const long long N, const int ndim, double Qi[]);
-void generateQrand(const int ndim, double Qg[], double Qrand[],
-	               double **Sbound);
+//void declaration_of_variables();
+void constants();
+//void generateQrand(const int ndim, double Qg[], double Qrand[],
+//	               double **Sbound);
 
 // Definition of function main()
 int main()
 { 
 	// std::cout << dice << std::endl;
-	using namespace constants;
-	declaration_of_variables(N, ndim, Qi);
+	//using namespace constants;
+	//declaration_of_variables();
+	constants();
 	//std::cout << Sbound[0][0] << std::endl;
 	// ----------- start the RRT -----------  
 	for (int i1 = 1; i1 < N; ++i1){

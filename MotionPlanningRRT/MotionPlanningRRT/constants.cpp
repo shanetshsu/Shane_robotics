@@ -2,7 +2,7 @@
 #include <iostream> // for std::cout and std::endl
 #include "constants.h"
 
-void declaration_of_variables()
+void constants()
 {
 	//using namespace constants;
 
@@ -12,11 +12,11 @@ void declaration_of_variables()
 	long long N = 500; // number of possible iterations for RRT
 	int ndim = 2; // # dimensions of the problem
 	//double Qi[ndim] = { 0, 0 };
-	double *Qi = new double[ndim];
+	// double *Qi = new double[ndim];
 	Qi[0] = 0; Qi[1] = 0; // initial state
 	double *Qg = new double[ndim];
 	Qg[0] = 10; Qg[1] = 10; // goal state
-    double dQ = 0.4; // maximum length of the edges
+	double dQ = 0.4; // maximum length of the edges
 	//double Sbound[2][ndim] = {
 	//		   { 0, 0 },
 	//		   { 10, 10 }  };
@@ -40,7 +40,7 @@ void declaration_of_variables()
 
 	double **Sbound = new double*[2];// allocate array of 2 pointers these are rows
 	for (int i1 = 0; i1 < 2; ++i1){ Sbound[i1] = new double[ndim]; }
-	Sbound[0][0] = 0 ; Sbound[0][1] = 0;
+	Sbound[0][0] = 0; Sbound[0][1] = 0;
 	Sbound[1][0] = 10; Sbound[1][1] = 10;
 
 	//double G[N][ndim];
@@ -53,6 +53,6 @@ void declaration_of_variables()
 	////double U[N][2];
 	//double **U = new double*[N];
 	//for (int i1 = 0; i1 < N; ++i1){ U[i1] = new double[2]; }
-	
+
 
 }

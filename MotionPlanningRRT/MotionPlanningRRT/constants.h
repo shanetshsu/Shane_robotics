@@ -1,33 +1,34 @@
 #ifndef CONSTANTS_H
+
 #define CONSTANTS_H
 #include "stdafx.h" // uncomment if using Visual Studio
-namespace constants
-{
+//namespace constants
+//{
 	// define robotcase named as RobotCase = 'SphericalPendulum';
-	char RobotCase[] = "SimpleCase" ;
-	const long long N = 500; // number of possible iterations for RRT
-	const int ndim = 2; // # dimensions of the problem
-	double Qi[ndim] = { 0, 0 }; // initial state
-	double Qg[ndim] = { 10,10 }; // goal state
-	double dQ = 0.4; // maximum length of the edges
-	//double Sbound[2][ndim] = {
-	//		   { 0, 0 },
-	//		   { 10, 10 }  };
+	extern char RobotCase[];
+	extern long long N; // number of possible iterations for RRT
+	extern int ndim; // # dimensions of the problem
+	extern double *Qi = new double[ndim]; // initial state
+	extern double *Qg = new double[ndim]; // goal state
+	extern double dQ; // maximum length of the edges
 
 
-	const double ConvDist = 0.04;// convergence distance
-	const double dt = 0.1;
+	extern double ConvDist;// convergence distance
+	extern double dt;
 
 	// dummy variables: parameters
-	int parent[N] = {1,1};// initialize the first two
+	extern int *parent = new int[N];
 	
 	// G saves the position vectors of the vertices from 1 to i
 	// i X ndim
 	//double G[N][ndim];
 	//double U[N][2];
-	int near_node = 1;
-	bool found = 0;
-	double Qrand[ndim];
-}
+	extern int near_node;
+	extern bool found;
+	extern double *Qrand = new double[ndim];
 
+	extern double **Sbound;
+
+//}
+	
 #endif
