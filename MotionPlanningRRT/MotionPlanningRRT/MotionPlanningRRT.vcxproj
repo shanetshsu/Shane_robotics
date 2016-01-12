@@ -84,6 +84,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="declaration_of_variables.cpp" />
+    <ClCompile Include="generateQrand.cpp" />
+    <ClCompile Include="get_Qnear.cpp" />
     <ClCompile Include="MotionPlanningRRT.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
