@@ -7,7 +7,7 @@ void generateQrand(const int ndim, double Qg[],  double Qrand[],
 // double *Qg is idendical to double Qg[]
 {
 	double bias_threshold = 0.03;
-	double rand01; // random number from 0 to 1
+	double rand01=0; // random number from 0 to 1
 	double dice = static_cast<double>(rand()) / RAND_MAX;
 	
 	
@@ -15,11 +15,12 @@ void generateQrand(const int ndim, double Qg[],  double Qrand[],
 	{
 		for (int i1 = 0; i1 < ndim; ++i1){
 			rand01 = static_cast<double>(rand()) / RAND_MAX;
-			Qrand[i1] = Sbound[i1][1] + (Sbound[i1][2] - Sbound[i1][1])*rand01;
+			Qrand[i1] = Sbound[0][i1] + (Sbound[1][i1] - Sbound[0][i1])*rand01;
 		}
 	}
 	else {
 		for (int i1 = 0; i1 < ndim; ++i1)
 			Qrand[i1] = Qg[i1];
 	}
+
 }
