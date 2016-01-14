@@ -7,7 +7,7 @@
 	// define robotcase named as RobotCase = 'SphericalPendulum';
 	extern char RobotCase[];
 	extern long long N; // number of possible iterations for RRT
-	extern int ndim; // # dimensions of the problem
+	extern const int ndim; // # dimensions of the problem
 	extern double *Qi;// = new double[ndim]; // initial state
 	extern double *Qg;// = new double[ndim]; // goal state
 	extern double dQ; // maximum length of the edges
@@ -18,6 +18,8 @@
 	extern int near_node;
 	extern bool found;
 	extern double *Qrand;//  = new double[ndim];
+	extern double *Qnear;//  = new double[ndim];
+	extern double *Qnew;
 	extern double **Sbound;
 	extern double **G;
 	extern double **U;

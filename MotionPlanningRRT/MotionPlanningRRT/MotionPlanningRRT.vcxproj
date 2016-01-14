@@ -85,12 +85,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="constants.cpp" />
+    <ClCompile Include="euclidean_distance2.cpp" />
     <ClCompile Include="generateQrand.cpp" />
+    <ClCompile Include="get_Qnear.cpp" />
     <ClCompile Include="MotionPlanningRRT.cpp" />
+    <ClCompile Include="Qnew_restrict_distance.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="update_tree_and_check_convergence.cpp" />
+    <ClCompile Include="write_results.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,8 @@
+clear
+close all
+clc
+%% load results
+caseName = 'RRTresults.txt';
+fid = fopen(caseName,'r');
+ndim = fscanf(fid,FmtInteger,      1          );
+fclose(fid);
